@@ -1,0 +1,15 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b45ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b35ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Outer diamond with rounded corners -->
+  <path d="M16 4 L24 14 L26 16 L24 18 L16 28 L8 18 L6 16 L8 14 Z" 
+        fill="url(#logoGradient)"/>
+  <!-- Inner diamond - black and slightly tilted -->
+  <path d="M16 8 L20 14 L22 16 L20 18 L16 24 L12 18 L10 16 L12 14 Z" 
+        fill="#000000" 
+        transform="rotate(8 16 16)"/>
+</svg>

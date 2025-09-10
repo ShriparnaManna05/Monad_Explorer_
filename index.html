@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monad Explorer Lite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <img src="monad-logo.svg" alt="Monad" class="logo">
+            <span class="brand-text">Monad Explorer Lite</span>
+            <div class="score-display">
+                <span class="score-label">Score:</span>
+                <span id="scoreValue" class="score-value">0</span>
+            </div>
+        </div>
+        <div class="header-controls">
+            <div class="wallet-section">
+                <button id="connectWallet" class="wallet-btn">Connect Wallet</button>
+                <div id="walletInfo" class="wallet-info" style="display: none;">
+                    <span id="walletAddress" class="wallet-address"></span>
+                    <button id="disconnectWallet" class="disconnect-btn">×</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search">
+            <input id="searchInput" type="text" placeholder="Search block number, tx hash, or address...">
+            <button id="searchBtn">Search</button>
+            <div id="searchHint" class="hint">Try: 12345, 0xabc... (tx), 0xdef... (address)</div>
+        </section>
+
+        <section class="realtime">
+            <h2>Realtime Blocks</h2>
+            <div id="blocksRail" class="blocks-rail"></div>
+        </section>
+
+        <section class="results">
+            <h2>Results</h2>
+            <div id="results"></div>
+        </section>
+
+        <section class="instructions">
+            <h2>🎮 How to Earn Badges</h2>
+            <div class="instructions-content">
+                <div class="instruction-card">
+                    <div class="badge-preview">🏗️</div>
+                    <div class="instruction-text">
+                        <h3>Contract Creator</h3>
+                        <p>Watch for blocks containing contract deployment transactions (where "to" field is empty)</p>
+                    </div>
+                </div>
+                <div class="instruction-card">
+                    <div class="badge-preview">🐋</div>
+                    <div class="instruction-text">
+                        <h3>Whale Watcher</h3>
+                        <p>Spot transactions with values greater than 2.0 MON tokens</p>
+                    </div>
+                </div>
+                <div class="instruction-card">
+                    <div class="badge-preview">⚡</div>
+                    <div class="instruction-text">
+                        <h3>Rapid Fire</h3>
+                        <p>Find blocks containing 4 or more transactions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-tip">
+                💡 <strong>Tip:</strong> Look for blocks with 🏆 icons! Click on badge-worthy blocks to earn badges and points. Special blocks appear every 5 seconds (about 1 in 7 blocks).
+                <br><strong>Scoring:</strong> +10 base points per block, +50 for badge blocks, +20 for busy blocks, +bonus for large transactions!
+            </div>
+        </section>
+
+        <section class="badges">
+            <h2>🏆 Your Badges</h2>
+            <div id="badges"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>🔮 Monad Explorer Lite - Demo mode active</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
